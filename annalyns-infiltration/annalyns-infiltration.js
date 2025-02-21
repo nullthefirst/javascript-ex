@@ -71,7 +71,6 @@ export function canFreePrisoner(
   prisonerIsAwake,
   petDogIsPresent
 ) {
-  // return petDogIsPresent && !archerIsAwake ? true : !petDogIsPresent && ()
   if (petDogIsPresent) {
     return !archerIsAwake ? true : false;
   } else {
