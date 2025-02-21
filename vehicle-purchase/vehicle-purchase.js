@@ -23,7 +23,8 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
-  throw new Error("Please implement the chooseVehicle function");
+  const ordered = [option1, option2].sort();
+  return `${ordered[0]} is clearly the better choice.`;
 }
 
 /**
