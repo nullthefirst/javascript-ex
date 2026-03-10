@@ -39,7 +39,7 @@ const PREPARATION_MINUTES_PER_LAYER = 2;
  * Represents how many minutes the lasagna should remain in the oven.
  */
 
-const EXPECTED_MINUTES_IN_OVEN = 40;
+export const EXPECTED_MINUTES_IN_OVEN = 40;
 
 /**
  * Determines the number of minutes the lasagna still needs to remain in the
