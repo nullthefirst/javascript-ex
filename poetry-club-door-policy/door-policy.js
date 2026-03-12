@@ -52,7 +52,9 @@ export function frontDoorPassword(word) {
  * @returns {string}
  */
 export function backDoorResponse(line) {
-  throw new Error("Remove this line and implement the function");
+  const clear = line.trim();
+  const last = clear.slice(clear.length - 1);
+  return last;
 }
 
 /**
