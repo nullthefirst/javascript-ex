@@ -65,5 +65,7 @@ export function backDoorResponse(line) {
  * @returns {string} the back door password
  */
 export function backDoorPassword(word) {
-  throw new Error("Remove this line and implement the function");
+  const polite = ", please";
+  const pass = frontDoorPassword(word) + polite;
+  return pass;
 }
