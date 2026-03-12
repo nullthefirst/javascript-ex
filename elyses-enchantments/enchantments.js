@@ -22,7 +22,9 @@ export function getItem(cards, position) {
  * @returns {number[]} the cards with the change applied
  */
 export function setItem(cards, position, replacementCard) {
-  throw new Error("Implement the setItem function");
+  let newCards = cards;
+  newCards.splice(position, 1, replacementCard);
+  return newCards;
 }
 
 /**
