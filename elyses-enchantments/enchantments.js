@@ -50,7 +50,9 @@ export function insertItemAtTop(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItem(cards, position) {
-  throw new Error("Implement the removeItem function");
+  let newCards = cards;
+  newCards.splice(position, 1);
+  return newCards;
 }
 
 /**
