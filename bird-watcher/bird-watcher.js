@@ -56,5 +56,9 @@ export function birdsInWeek(birdsPerDay, week) {
  * @returns {void} should not return anything
  */
 export function fixBirdCountLog(birdsPerDay) {
-  throw new Error("Remove this line and implement the function");
+  for (let bird = 0; bird < birdsPerDay.length; bird = bird + 2) {
+    if (bird + (1 % 2) !== 0) {
+      birdsPerDay[bird] += 1;
+    }
+  }
 }
