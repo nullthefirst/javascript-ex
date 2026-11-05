@@ -36,7 +36,46 @@ export function timeToMixJuice(name) {
  * @returns {number} number of limes cut
  */
 export function limesToCut(wedgesNeeded, limes) {
-  throw new Error("Remove this line and implement the function");
+  /**
+   * @param {any} limeSize
+   */
+  function wedgeFromLime(limeSize) {
+    switch (limeSize) {
+      case "small":
+        return 6;
+      case "medium":
+        return 8;
+      case "large":
+        return 10;
+    }
+  }
+
+  let wedgesGotten = 0;
+  let limeCount = 0;
+
+  if (wedgesNeeded === 0 || limes.length === 0) {
+    return limeCount;
+  }
+
+  let limesAtHand = limes.length;
+
+  while (wedgesNeeded > wedgesGotten) {
+    if (limesAtHand === 0) {
+      break;
+    }
+
+    for (let lime = 0; lime < limes.length; lime++) {
+      if (wedgesGotten > wedgesNeeded) {
+        break;
+      }
+
+      wedgesGotten += wedgeFromLime(limes[lime]);
+      limesAtHand--;
+      limeCount++;
+    }
+  }
+
+  return limeCount;
 }
 
 /**
